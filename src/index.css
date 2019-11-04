@@ -22,19 +22,20 @@ code {
   height: 80px;
   background-color: rgb(255, 217, 000);
   overflow: hidden;
-  font-family: 'Rokkitt', serif;
-  font-weight: bold;
-
-
+  font-family: 'Righteous', cursive;
+  /* font-weight: bold; */
+  
+  
   }
-
+  
   .headers img {
     width: 100px;
   }
-.container{
+  .container{
   display: flex;
   margin-top: 20px;
   text-align: center;
+  height: 100%;
 }
 .test{
   
@@ -48,11 +49,44 @@ code {
 .title{
   padding: 0;
   margin: 0;
-  font-family: 'Righteous', cursive;
+  font-family: 'Rokkitt', serif;
 
 
 }
 .poster {
     border-radius: 50px;
 
+}
+.link{
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+}
+.link:hover{
+  font-weight: bold;
+}
+h1{
+  color: rgb(255, 217, 000);
+}
+.footer{
+  display: inline-flex;
+  position:inherit;
+  bottom:0;
+  text-align: center;
+  justify-content: space-around;
+  padding: 0 ;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 217, 000);
+  overflow: hidden;
+  /* font-weight: bold; */
+}
+.in{
+  width: 40px;
+}
+.cr{
+  width : 100px;
+}
+h3{
+  font-weight: normal;
 }
