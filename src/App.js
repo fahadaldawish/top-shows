@@ -1,33 +1,44 @@
 import React, {Component} from 'react'
-import TopShows from './TopShows';
-import axios from 'axios';
+// import TopShows from './TopShows';
+// import logos from './logos.png';
+// import Header from "./Header"
+// import Watchlist from './WatchList';
+// import About from './About';
+// import Contact from './Contact'
+// import MyFavorate from './MyFavorate';
+import Home from './Home';
+// import {BrowserRouter as Router, Switch, Link ,  Route} from 'react-router-dom'
+import Logo from './Logo';
+
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      tvShows:[]
-    }
-  }
- componentDidMount(){
-  axios.get("https://api.themoviedb.org/3/tv/top_rated?api_key=909e54fa421fba59bd5bd7f0e5233c58")
-   .then(res => {
-    //  console.log(res.data.results)
-    this.setState({
-          tvShows : res.data.results
-   })
-  })
-   .catch(err => {
-     console.log(err);
-     
-   })
-}
+
  render(){
-    
    return(
-     <div>
-      <TopShows toppies={this.state.tvShows} />
-     </div>
+
+    <div>     
+     {/* <Header />
+     <Router>
+      <nav className="headers">
+        <Link to='/myfavorate'>My Favorate</Link>
+        <Link to ='/Watchlist'>My List</Link>
+        <Link to = '/'> <img src = {logos} alt="logo" /></Link>
+        <Link to='/Contact'>Contact</Link>
+        <Link to='/About'>About</Link>
+      </nav>
+      <div> */}
+        <Logo />
+        {/* <Home /> */}
+      {/* <Switch>
+      <Route path='/myfavorate' component={MyFavorate}/>
+      <Route path='/Watchlist' component={Watchlist}/>
+      <Route path='/' component={Home}/>      
+      <Route path='/Contact' component={Contact}/>
+      <Route path='/About' component={About}/>
+      </Switch>
+      </div>
+    </Router> */}
+    </div>
    )
  }
 }
