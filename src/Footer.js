@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer">
             <img className='cr' src = {cr} alt="copyright" />
             <h3>copyright © Fahad's. All right reserved</h3>
-            <img className='in' src = {lin} alt="Linkedin" />
+           <a href='https://www.linkedin.com/in/fahadaldawish'> <img className='in' src = {lin} alt="Linkedin" /></a>
         </div>
         </div>
     )

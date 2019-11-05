@@ -9,8 +9,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",monospace;
   }
 .headers{
   display: inline-flex;
@@ -29,7 +28,10 @@ code {
   }
   
   .headers img {
-    width: 100px;
+    width: 140px;
+  }
+  .headers img:hover{
+    background-color: rgb(39, 39, 39);
   }
   .container{
   display: flex;
@@ -50,11 +52,19 @@ code {
   padding: 0;
   margin: 0;
   font-family: 'Rokkitt', serif;
+  font-size: larger;
 
 
 }
 .poster {
     border-radius: 50px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+}
+.poster:hover{
+  /* border-radius: 10px; */
+  box-shadow: 0px 0px 20px rgb(255, 200, 000);
 
 }
 .link{
@@ -69,8 +79,7 @@ h1{
 }
 .footer{
   display: inline-flex;
-  position:inherit;
-  bottom:0;
+  position:absolute;
   text-align: center;
   justify-content: space-around;
   padding: 0 ;
@@ -89,4 +98,30 @@ h1{
 }
 h3{
   font-weight: normal;
+}
+.showDetails{
+  display: inline-flex;
+  margin: 10px;
+  padding: 0 auto;
+}
+.btnCont{
+  position: relative;
+  text-align: center;
+}
+.hi{
+    position: absolute;
+    bottom: 50px;
+    left: 50px; 
+    /* display: none; */
+
+}
+.hi1{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    /* display: none; */
+}
+.btn{
+ display: flex;
+  justify-content: space-around;
 }

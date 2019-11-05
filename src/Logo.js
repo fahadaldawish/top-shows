@@ -6,6 +6,7 @@ import Watchlist from './WatchList';
 import About from './About';
 import Contact from './Contact'
 import Home from'./Home';
+import Show from './Show';
 import {BrowserRouter as Router, Switch, Link ,  Route} from 'react-router-dom'
 
 
@@ -20,6 +21,7 @@ const Logo = () => {
         <Link className='link' to = '/'> <img src = {logos} alt="logo" /></Link>
         <Link className='link' to='/contact'>Contact</Link>
         <Link className='link' to='/about'>About</Link>
+        <Link className='link' to='/show'>Show</Link>
       </nav>
       <div>
       <Switch>
@@ -28,6 +30,7 @@ const Logo = () => {
       <Route path='/watchlist' component={Watchlist}/>
       <Route path='/contact' component={Contact}/>
       <Route path='/about' component={About}/>
+      <Route path='/show' component={Show}/>
       </Switch>
       </div>
     </Router>
