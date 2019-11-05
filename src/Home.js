@@ -49,7 +49,7 @@ class Home extends Component{
             {/* <Fave add={this.state.myFavorate} /> */}
             {/* <Show /> */}
             </div>
-            <MyFavorate add = {this.addToFave} />
+            {/* <MyFavorate add = {this.addToFave} /> */}
             </div> 
 
 
