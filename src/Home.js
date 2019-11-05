@@ -10,7 +10,6 @@ class Home extends Component{
         super(props)
         this.state={
           tvShows:[],
-          myFavorate : []
         }
       }
      componentDidMount(){
@@ -21,35 +20,24 @@ class Home extends Component{
               tvShows : res.data.results
               
             })
-            console.log(this.state.tvShows);
+            // console.log(this.state.tvShows);
           })
        .catch(err => {
          console.log(err);
          
        })
     }
-     addToFave = (show) => {
-      const myFavorate = [...this.state.myFavorate]
-      const showIndex = myFavorate.indexOf(show)
-      if(showIndex !== 0){
-        myFavorate.splice(showIndex,1)
-      }
-      else{
-      myFavorate.push(show);
-      }
-      this.setState({myFavorate})
-    }
+ 
     render(){
 
         return(
             <div>
 
             <div className="container">
-            <TopShows toppies={this.state.tvShows} />
+            <TopShows   addToFave={this.props.addToFave} toppies={this.state.tvShows} />
             {/* <Fave add={this.state.myFavorate} /> */}
             {/* <Show /> */}
             </div>
-            {/* <MyFavorate add = {this.addToFave} /> */}
             </div> 
 
 

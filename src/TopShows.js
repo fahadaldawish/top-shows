@@ -3,31 +3,25 @@ import Logo from './Logo';
 // import show from'./show';
 import Fave from './buttons/Fave'
 import ToWatch from './buttons/ToWatch';
+import PrintMo from './PrintMo';
 
 class TopShows extends Component {
     constructor(props){
         super(props)
+        this.state={
+            myFavorate : [],
+            later :[]
+          }
     }
+
+ 
     render(){
         let topTen;         
         
         if (this.props.toppies.length > 0){
 
-           topTen = this.props.toppies.map((show) =>{ 
-               return (<div className="test" key={show.id}>  
-               
-               <div>
-               <img className="poster" src= {`https://image.tmdb.org/t/p/w200/${show.poster_path}`}> 
-                </img>
-              <div className='btn'>
-              <button onClick ={() => {this.props.addToFave(this.state.add)}}>F</button>
-              <button onClick ={() => {this.props.watchLater(this.state.later)}}>L</button> 
-              </div>
-               <p className='title'> { show.name } </p>
-               </div>
-               </div>
-               
-               );
+           topTen = this.props.toppies.map((show,index) =>{ 
+               return (<PrintMo show={show} key={index} add={(e)=>{this.props.addToFave(show)}}/>);
            })
            
            console.log(topTen);

@@ -108,14 +108,14 @@ h3{
   position: relative;
   text-align: center;
 }
-.hi{
+.i{
     position: absolute;
     bottom: 50px;
     left: 50px; 
     /* display: none; */
 
 }
-.hi1{
+.ii{
     position: absolute;
     bottom: 50px;
     right: 50px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import logos from './logos.png';
 import TopShows from './TopShows';
 import MyFavorate from './MyFavorate';
@@ -10,11 +10,34 @@ import Show from './Show';
 import {BrowserRouter as Router, Switch, Link ,  Route} from 'react-router-dom'
 
 
+class Logo extends Component {
+  constructor(props){
+    super()
+    this.state={
+      myFavorate: []
+    }
+  }
+  addToFave = (show) => {
+    let myFavorate =[...this.state.myFavorate]
+    const showIndex = myFavorate.indexOf(show)
+    if(showIndex !== -1){
+        myFavorate.splice(showIndex,1)
+        this.setState({myFavorate:myFavorate})
+    }
+    else{
+        myFavorate=[...myFavorate, show]
+        // console.log(myFavorate)
+        // this.state.myFavorate.push(show)
+        // this.setState({myFavorate:myFavorate})
+    }
+    this.setState({myFavorate: myFavorate})
+    console.log(myFavorate)  }
 
-const Logo = () => {
+  render(){
+
     return (
-        
-     <Router>
+      
+      <Router>
       <nav className="headers">
         <Link className='link' to='/myfavorate'>My Favorate</Link>
         <Link className='link' to ='/watchlist'>My List</Link>
@@ -25,8 +48,8 @@ const Logo = () => {
       </nav>
       <div>
       <Switch>
-      <Route exact path='/' component={Home}/>      
-      <Route path='/myfavorate' component={MyFavorate}/>
+      <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate}/>}/>      
+      <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate}/>}/>
       <Route path='/watchlist' component={Watchlist}/>
       <Route path='/contact' component={Contact}/>
       <Route path='/about' component={About}/>
@@ -35,5 +58,6 @@ const Logo = () => {
       </div>
     </Router>
     )
+  }
 }
 export default Logo;
