@@ -3,7 +3,7 @@ import cr from './cr.png';
 import lin from './lin.png';
 const Footer = () => {
     return (
-        <div className='container'>
+        <div className='fahad'>
 
         <div className="footer">
             <img className='cr' src = {cr} alt="copyright" />

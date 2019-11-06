@@ -13,6 +13,8 @@ class MyFavorate extends Component{
         if (this.props.myFavorate.length > 0){
             faves = this.props.myFavorate.map((fave , index) => {
                     return (
+                        <div className='fave'>
+
                         <div className="btnCont">
 
                         <div className='test' >
@@ -21,17 +23,18 @@ class MyFavorate extends Component{
                             <p>{fave.name}</p>
                         </div>
                         </div>
+                        </div>
                 )
             }
             )
         }
         
         return (
-            <div>
+            <div className="fave">
             <h1>My Favorate</h1>
             {/* {console.log(this.props)} */}
             {faves}
-            <button onClick= {(() => this.props.clearList())}>reset</button>
+            <button className="reset" onClick= {(() => this.props.clearList())}>reset</button>
         </div>
     )
     }

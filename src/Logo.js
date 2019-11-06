@@ -81,7 +81,6 @@ class Logo extends Component {
         <Link className='link' to='/about'>About</Link>
         <Link className='link' to='/show'>Show</Link>
       </nav>
-      <div>
       <Switch>
       <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate} 
       funWatch={this.funWatch} watchLater={this.state.watchLater}/>}/>      
@@ -92,7 +91,6 @@ class Logo extends Component {
       <Route path='/about' component={About}/>
       <Route path='/show' component={Show}/>
       </Switch>
-      </div>
     </Router>
     )
   }

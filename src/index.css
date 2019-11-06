@@ -2,12 +2,16 @@ body {
   /* margin: 0 auto; */
   padding: 0;
   margin: 0;
-
+width: 100%;
+height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(39, 39, 39);
 }
 
+div {
+  border: 2px solid red;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",monospace;
   }
@@ -33,22 +37,34 @@ code {
   .headers img:hover{
     background-color: rgb(39, 39, 39);
   }
-  .container{
-  /* display: flex; */
-  margin-top: 20px;
-  text-align: center;
-  height: 100%;
-}
-.test1{
+ 
+.test{
   
-  display: inline-block;
+  /* display: flex; */
   /* border-radius: 40px; */
   /* flex-direction: column; */
-  padding: 10px ;
+  padding: 10px;
   text-align: center;
   color: rgb(255, 217, 000);
   
 }
+
+.fahad{
+display: flex;
+flex-wrap: wrap;
+width: 100vw;
+height: 100vh;
+justify-content: space-around;
+justify-content: flex-end;
+}
+
+.reem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* width: 20%; */
+}
+
 .title{
   padding: 0;
   margin: 0;
@@ -58,7 +74,8 @@ code {
 }
 
 .poster {
-    border-top-left-radius: 50px;
+  display: block;
+  border-top-left-radius: 50px;
     border-bottom-right-radius: 30px;
     border-radius: 30px;
     -webkit-transition-duration: 0.2s;
@@ -82,15 +99,14 @@ h1{
 }
 .footer{
   display: inline-flex;
-  
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 ;
   align-items: center;
   width: 100%;
   height: 50px;
   background-color: rgb(255, 217, 000);
-  overflow: hidden;
+  /* overflow: hidden; */
   /* font-weight: bold; */
 }
 .in{
@@ -116,8 +132,8 @@ h3{
     position: absolute;
     bottom: 25px;
     opacity: 20%;
-    left: 629px; 
-    width: 13.8% !important;
+    left: 0px; 
+    width: 100% !important;
     height: 30px;
     background-color: rgb(255, 200, 000);
     border-bottom-right-radius: 80px ;
@@ -136,12 +152,22 @@ h3{
     right: 50px;
     /* display: none; */
  */
-.btn{
+/* .btn{
  display: flex;
   justify-content: space-around;
-}
+} */
 .remove{
-  position: absolute;
-  bottom: 50px;
+ border-radius: 2px;
+}
+.reset{
+  border-radius: 4px;
+ background-color: rgb(255, 217, 000);
+ border: 0ch;
+
+}
+.fave{
+  text-align: center;
+}
+.dalia{
   
 }

@@ -22,12 +22,12 @@ class TopShows extends Component {
 
            topTen = this.props.toppies.map(show =>{ 
             return (
-            <>
+            // <div className="reem">
             <PrintMo show={show} 
-                watchLater={(e)=>{this.props.funWatch(show)}}
+                // watchLater={(e)=>{this.props.funWatch(show)}}
                  addToFave={(e)=>{this.props.addToFave(show)}}
                />
-               </>
+            //    </div>
                );
            })
            
@@ -37,7 +37,7 @@ class TopShows extends Component {
            topTen = <h1>Loading...</h1>
         }   
     return (
-        <div>
+        <div className="fahad">
             {/* <Logo /> */}
             {topTen}
             
