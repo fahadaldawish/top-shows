@@ -77,21 +77,21 @@ class Logo extends Component {
     
       <nav className="headers">
         <Link className='link' to='/myfavorate'>My Favorate</Link>
-        <Link className='link' to ='/watchlist'>My List</Link>
+        {/* <Link className='link' to ='/watchlist'>My List</Link> */}
         <Link className='link' to = '/'> <img src = {logos} alt="logo" /></Link>
-        <Link className='link' to='/contact'>Contact</Link>
+        {/* <Link className='link' to='/contact'>Contact</Link> */}
         <Link className='link' to='/about'>About</Link>
-        <Link className='link' to='/show'>Show</Link>
+        {/* <Link className='link' to='/show'>Show</Link> */}
       </nav>
       <Switch>
       <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate} 
       funWatch={this.funWatch} watchLater={this.state.watchLater}/>}/>      
       <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate} 
       removeItem={this.removeItem} clearList={this.clearList}/>}/>
-      <Route path='/watchlist' render={(...props)=><WatchList watchLater={this.state.watchLater}/>}/>
-      <Route path='/contact' component={Contact}/>
+      {/* <Route path='/watchlist' render={(...props)=><WatchList watchLater={this.state.watchLater}/>}/> */}
+      {/* <Route path='/contact' component={Contact}/> */}
       <Route path='/about' component={About}/>
-      <Route path='/show' component={Show}/>
+      {/* <Route path='/show' component={Show}/> */}
       </Switch>
       </HashRouter>
     )

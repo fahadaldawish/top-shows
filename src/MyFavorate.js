@@ -13,16 +13,14 @@ class MyFavorate extends Component{
         if (this.props.myFavorate.length > 0){
             faves = this.props.myFavorate.map((fave , index) => {
                     return (
-                        <div className='fave'>
+                        <div className='container'>
 
                         <div className="btnCont">
 
-                        <div className='test' >
                             <img className="poster" src= {`https://image.tmdb.org/t/p/w200/${fave.poster_path}`}/>
-                            <button className='remove' onClick={(()=>this.props.removeItem(fave))}>remove</button>
-                            <p>{fave.name}</p>
+                            <button className='i' onClick={(()=>this.props.removeItem(fave))}>☆</button>
                         </div>
-                        </div>
+                            <p className="title">{fave.name}</p>
                         </div>
                 )
             }
@@ -30,11 +28,11 @@ class MyFavorate extends Component{
         }
         
         return (
-            <div className="fave">
+            <div className="container">
             <h1>My Favorate</h1>
             {/* {console.log(this.props)} */}
             {faves}
-            <button className="reset" onClick= {(() => this.props.clearList())}>reset</button>
+            <button className="reset" onClick= {(() => this.props.clearList())}>Clear</button>
         </div>
     )
     }
