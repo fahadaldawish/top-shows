@@ -3,7 +3,7 @@ import React from 'react'
 export default function PrintMo(props) {
     
     return (
-        <div className="container">
+        <div>
                <div className="btnCont">
                <img className="poster" src= {`https://image.tmdb.org/t/p/w200/${props.show['poster_path']}`}> 
                </img>

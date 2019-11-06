@@ -32,7 +32,7 @@ class Home extends Component{
     render(){
 
         return(
-            <div className="cotainer">
+            <div>
             <TopShows   addToFave={this.props.addToFave} watchLater={this.props.watchLater} toppies={this.state.tvShows} 
             funWatch={this.props.funWatch}/>
             {/* <Fave add={this.state.myFavorate} /> */}

@@ -29,7 +29,6 @@ class MyFavorate extends Component{
         
         return (
             <div className="container">
-            <h1>My Favorate</h1>
             {/* {console.log(this.props)} */}
             {faves}
             <button className="reset" onClick= {(() => this.props.clearList())}>Clear</button>

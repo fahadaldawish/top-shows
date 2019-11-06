@@ -78,7 +78,7 @@ class Logo extends Component {
       <nav className="headers">
         <Link className='link' to='/myfavorate'>My Favorate</Link>
         {/* <Link className='link' to ='/watchlist'>My List</Link> */}
-        <Link className='link' to = '/'> <img src = {logos} alt="logo" /></Link>
+        <Link to = '/'> <img src = {logos} alt="logo" /></Link>
         {/* <Link className='link' to='/contact'>Contact</Link> */}
         <Link className='link' to='/about'>About</Link>
         {/* <Link className='link' to='/show'>Show</Link> */}

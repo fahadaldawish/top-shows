@@ -90,10 +90,34 @@ padding-top: 10px;
 .link{
   color: rgb(39, 39, 39);
   text-decoration: none;
+  /* background-color: skyblue; */
+ transition-duration: 0.4s;
+  padding : 10px;
+  border-radius: 10px;
+  
 }
 .link:hover{
-  font-weight: bold;
+  /* font-weight: bold; */
+  background-color: rgb(39, 39, 39);
+  color: rgb(255, 217, 000);
+  
 }
+.reset{
+     border-radius: 10px;
+     background-color: rgb(39, 39, 39);
+     color: rgb(255, 217, 000);
+     border: 0ch;
+     width: 7rem;
+     height: 2rem;
+     transition-duration: 0.5s;
+     font-family: 'Rokkitt', serif;
+     font-size: 20px;
+     font-weight: bold;
+    }
+    .reset:hover{
+      background-color: rgb(255,217,000);
+      color:rgb(39, 39, 39);
+    }
 h1{
   color: rgb(255, 217, 000);
 }
@@ -168,18 +192,13 @@ h3{
  border-radius: 2px;
  
 }
-.reset{
-  border-radius: 4px;
- background-color: rgb(255, 217, 000);
- border: 0ch;
-
-}
 .fave{
   text-align: center;
 }
 
 .container {
-margin: 0.5rem;  
+margin: 0.5rem;
+height: 79vh;  
 }
 
 div{
@@ -189,3 +208,9 @@ div{
 .fahad2 {
 height: auto;
 }
+
+.container2 {
+  margin: 0.5rem;
+  height: 77vh;  
+  }
+  
