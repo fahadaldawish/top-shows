@@ -11,7 +11,7 @@ export default function PrintMo(props) {
                </img>
               <div className='btn'>
               <button className='i' onClick ={props.addToFave}>F</button>
-              <button className='ii' onClick = {props.funWatch}>L</button> 
+              {/* <button className='ii' onClick = {props.funWatch}>L</button>  */}
               </div>
                <p className='title'> { props.show.name } </p>
                </div>

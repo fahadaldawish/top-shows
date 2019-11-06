@@ -34,15 +34,16 @@ code {
     background-color: rgb(39, 39, 39);
   }
   .container{
-  display: flex;
+  /* display: flex; */
   margin-top: 20px;
   text-align: center;
   height: 100%;
 }
-.test{
+.test1{
   
   display: inline-block;
   /* border-radius: 40px; */
+  /* flex-direction: column; */
   padding: 10px ;
   text-align: center;
   color: rgb(255, 217, 000);
@@ -53,10 +54,13 @@ code {
   margin: 0;
   font-family: 'Rokkitt', serif;
   font-size: larger;
+  color: rgb(255, 217, 000);
 }
 
 .poster {
-    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 30px;
+    border-radius: 30px;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
@@ -78,7 +82,7 @@ h1{
 }
 .footer{
   display: inline-flex;
-  position:absolute;
+  
   text-align: center;
   justify-content: space-around;
   padding: 0 ;
@@ -110,17 +114,28 @@ h3{
 }
 .i{
     position: absolute;
-    bottom: 50px;
-    left: 50px; 
-    /* display: none; */
+    bottom: 25px;
+    opacity: 20%;
+    left: 240px; 
+    width: 29.6% !important;
+    height: 30px;
+    background-color: rgb(255, 200, 000);
+    border-bottom-right-radius: 80px ;
+    border-bottom-left-radius: 80px ;
 
+    border: rgb(255, 217, 000);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
-.ii{
+.i:hover{
+  opacity: 90%;
+}
+/* .ii{
     position: absolute;
     bottom: 50px;
     right: 50px;
     /* display: none; */
-}
+ */
 .btn{
  display: flex;
   justify-content: space-around;

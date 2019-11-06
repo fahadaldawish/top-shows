@@ -62,6 +62,12 @@ class Logo extends Component {
         this.setState({myFavorate})
 
       }
+        clearList =  () => {
+          this.setState({
+            myFavorate : []
+          })
+        }
+
   
   render(){
 
@@ -79,7 +85,8 @@ class Logo extends Component {
       <Switch>
       <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate} 
       funWatch={this.funWatch} watchLater={this.state.watchLater}/>}/>      
-      <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate} removeItem={this.removeItem}/>}/>
+      <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate} 
+      removeItem={this.removeItem} clearList={this.clearList}/>}/>
       <Route path='/watchlist' render={(...props)=><WatchList watchLater={this.state.watchLater}/>}/>
       <Route path='/contact' component={Contact}/>
       <Route path='/about' component={About}/>

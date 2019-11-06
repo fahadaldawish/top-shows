@@ -23,14 +23,15 @@ class MyFavorate extends Component{
                         </div>
                 )
             }
-        )
-    }
+            )
+        }
         
-    return (
-        <div>
+        return (
+            <div>
             <h1>My Favorate</h1>
             {/* {console.log(this.props)} */}
             {faves}
+            <button onClick= {(() => this.props.clearList())}>reset</button>
         </div>
     )
     }
