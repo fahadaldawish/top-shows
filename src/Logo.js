@@ -7,7 +7,7 @@ import About from './About';
 import Contact from './Contact'
 import Home from'./Home';
 import Show from './Show';
-import {BrowserRouter as Router, Switch, Link ,  Route} from 'react-router-dom'
+import {BrowserRouter as HashRouter, Switch, Link ,  Route} from 'react-router-dom'
 
 
 class Logo extends Component {
@@ -72,7 +72,9 @@ class Logo extends Component {
   render(){
 
     return (
-    <Router>
+      <HashRouter basename="/">
+
+    
       <nav className="headers">
         <Link className='link' to='/myfavorate'>My Favorate</Link>
         <Link className='link' to ='/watchlist'>My List</Link>
@@ -91,7 +93,7 @@ class Logo extends Component {
       <Route path='/about' component={About}/>
       <Route path='/show' component={Show}/>
       </Switch>
-    </Router>
+      </HashRouter>
     )
   }
 }
