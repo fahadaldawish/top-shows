@@ -6,7 +6,7 @@ class Fave extends Component {
         return (
             
                 <div>
-                    <button onClick ={() => {this.props.addToFave(this.state.add)}}>F</button>
+                    <button onClick ={() => {this.props.addToFave(this.state.addToFave)}}>F</button>
                 </div>
             )
         }

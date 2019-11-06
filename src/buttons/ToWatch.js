@@ -5,7 +5,7 @@ class ToWatch extends Component {
 
        return (
            <div>
-        <button onClick ={() => {this.props.watchLater(this.state.later)}}>L</button>
+        <button onClick ={() => {this.props.watchLater(this.state.watchLater)}}>L</button>
     </div>
     )
 }

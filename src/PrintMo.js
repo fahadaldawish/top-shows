@@ -10,8 +10,8 @@ export default function PrintMo(props) {
                <img className="poster" src= {`https://image.tmdb.org/t/p/w200/${props.show['poster_path']}`}> 
                </img>
               <div className='btn'>
-              <button className='i' onClick ={props.add}>F</button>
-              <button className='ii' onClick ={(e) => {props.watchLater()}}>L</button> 
+              <button className='i' onClick ={props.addToFave}>F</button>
+              <button className='ii' onClick = {props.funWatch}>L</button> 
               </div>
                <p className='title'> { props.show.name } </p>
                </div>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Show from './Show';
 import Fave from './buttons/Fave';
 import MyFavorate from './MyFavorate';
+import WatchList from './WatchList';
 
 class Home extends Component{
     constructor(props){
@@ -34,7 +35,8 @@ class Home extends Component{
             <div>
 
             <div className="container">
-            <TopShows   addToFave={this.props.addToFave} toppies={this.state.tvShows} />
+            <TopShows   addToFave={this.props.addToFave} watchLater={this.props.watchLater} toppies={this.state.tvShows} 
+            funWatch={this.props.funWatch}/>
             {/* <Fave add={this.state.myFavorate} /> */}
             {/* <Show /> */}
             </div>

@@ -10,7 +10,7 @@ class TopShows extends Component {
         super(props)
         this.state={
             myFavorate : [],
-            later :[]
+            laters :[]
           }
     }
 
@@ -20,8 +20,15 @@ class TopShows extends Component {
         
         if (this.props.toppies.length > 0){
 
-           topTen = this.props.toppies.map((show,index) =>{ 
-               return (<PrintMo show={show} key={index} add={(e)=>{this.props.addToFave(show)}}/>);
+           topTen = this.props.toppies.map(show =>{ 
+            return (
+            <>
+            <PrintMo show={show} 
+                watchLater={(e)=>{this.props.funWatch(show)}}
+                 addToFave={(e)=>{this.props.addToFave(show)}}
+               />
+               </>
+               );
            })
            
            console.log(topTen);

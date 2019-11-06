@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import logos from './logos.png';
 import TopShows from './TopShows';
 import MyFavorate from './MyFavorate';
-import Watchlist from './WatchList';
+import WatchList from './WatchList';
 import About from './About';
 import Contact from './Contact'
 import Home from'./Home';
@@ -14,30 +14,59 @@ class Logo extends Component {
   constructor(props){
     super()
     this.state={
-      myFavorate: []
+      myFavorate: [],
+      watchLater:[]
     }
   }
   addToFave = (show) => {
-    let myFavorate =[...this.state.myFavorate]
+    let myFavorate =[]
     const showIndex = myFavorate.indexOf(show)
-    if(showIndex !== -1){
-        myFavorate.splice(showIndex,1)
-        this.setState({myFavorate:myFavorate})
+        if (showIndex !== -1){
+          myFavorate = [...this.state.myFavorate]
+        }
+        else{
+          myFavorate = [...this.state.myFavorate, show]
+       
     }
-    else{
-        myFavorate=[...myFavorate, show]
-        // console.log(myFavorate)
-        // this.state.myFavorate.push(show)
-        // this.setState({myFavorate:myFavorate})
+    this.setState({myFavorate})
+    // console.log(myFavorate) 
+   }
+   
+   
+    funWatch = (show) => {
+      let watchLater =[...this.state.watchLater]
+      const laterIndex = watchLater.indexOf(show)
+      if(laterIndex !== -1){
+          watchLater.splice(laterIndex,1)
+          this.setState({watchLater:watchLater})
+      }
+      else{
+          watchLater=[...watchLater, show]
+          // console.log(myFavorate)
+          // this.state.myFavorate.push(show)
+          // this.setState({myFavorate:myFavorate})
+      }
+      this.setState({watchLater: watchLater})
+      // console.log(watchLater)  
     }
-    this.setState({myFavorate: myFavorate})
-    console.log(myFavorate)  }
 
+      removeItem = (show) => {
+        console.log(show);
+        
+        let myFavorate = [...this.state.myFavorate]
+        const showIndex = myFavorate.indexOf(show)
+
+        myFavorate.splice(showIndex,1)
+        console.log(myFavorate);
+        
+        this.setState({myFavorate})
+
+      }
+  
   render(){
 
     return (
-      
-      <Router>
+    <Router>
       <nav className="headers">
         <Link className='link' to='/myfavorate'>My Favorate</Link>
         <Link className='link' to ='/watchlist'>My List</Link>
@@ -48,9 +77,10 @@ class Logo extends Component {
       </nav>
       <div>
       <Switch>
-      <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate}/>}/>      
-      <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate}/>}/>
-      <Route path='/watchlist' component={Watchlist}/>
+      <Route exact path='/' render={(...props)=><Home addToFave={this.addToFave} myFavorate={this.state.myFavorate} 
+      funWatch={this.funWatch} watchLater={this.state.watchLater}/>}/>      
+      <Route path='/myfavorate' render={(...props)=><MyFavorate myFavorate={this.state.myFavorate} removeItem={this.removeItem}/>}/>
+      <Route path='/watchlist' render={(...props)=><WatchList watchLater={this.state.watchLater}/>}/>
       <Route path='/contact' component={Contact}/>
       <Route path='/about' component={About}/>
       <Route path='/show' component={Show}/>
