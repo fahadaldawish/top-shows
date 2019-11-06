@@ -126,6 +126,7 @@ h1{
   text-align: center;
   justify-content: space-around;
   padding: 0 ;
+  position: relative;
   align-items: center;
   width: 99.8%;
   height: 50px;
@@ -197,14 +198,21 @@ h3{
 }
 
 .container {
-margin: 0.5rem;
-height: 79vh;  
+margin-top: 0.5rem;
+/* height: 79vh;   */
 }
-
+.containerFave{
+display: inline-block;
+margin: 15px;
+}
 div{
   /* border:2px solid red ; */
 }
-
+.containerFave1{
+  display: block;
+  margin: 15px;
+  width: 100%;
+  }
 .fahad2 {
 height: auto;
 }
