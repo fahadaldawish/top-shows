@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Top Show project
 
-## Available Scripts
+##Table of content:
+-Description
+-Structure
+-Tools & Techneiqes 
+-Project status
+-Future plan
+-Conclusion
 
-In the project directory, you can run:
+###Descreption:
+It is a web application which built to show the high 20 rated shows based on TMDB rating.
 
-### `npm start`
+-----------------------------------------------------------------
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###Structure:
+The system is made of 2 lists , one for all shows and the other one is for favorates shows.
+The "Home" page contains the nav bar wich includes both of the lists and "About" component, then the shows' posters and titles are listed and at the bottom we have thee footer which contains the "TMDB" & my copyrights and my "Linkedin" page for contacts.
+"My Favorate" page has the same structure of the home page with different functionality for the buttons , the first button shall remove a selected show from the list, the "Clear" button shall remove all shows from the list.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+----------------------------------------------------------------
 
-### `npm test`
+###Tools & Techneiqes:
+-JavaScript
+-CSS
+-API
+-Routers
+-React
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----------------------------------------------------------------
 
-### `npm run build`
+###Project status:
+For now , the application is able to show the high rated shows with poster and title. The user is able to add & remove show from the favorate list , and clear the whole list.
+<img src="images/project.png" alt="screenshot of the application">
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----------------------------------------------------------------
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-Future plan:
+User shall be able to add to & remove from "Watch later" list.
+User shall be able to show each show details (e.g. Description , cast and rate).
+User shall be able to watch the show trailer.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+----------------------------------------------------------------
 
-### `npm run eject`
+-Conclusion:
+It wasn't easy to start and apply the functions, but it was a great opportunity to get more practice on a new concepts for me. Next project should be way better than this one and more effeicint.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+After all, if you are interested, click <a href="https://fahadaldawish.github.io/top-shows/">here</a>
