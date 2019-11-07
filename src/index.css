@@ -42,9 +42,7 @@ code {
  
 .test{
   
-  /* display: flex; */
-  /* border-radius: 40px; */
-  /* flex-direction: column; */
+
   padding: 10px;
   text-align: center;
   color: rgb(255, 217, 000);
@@ -60,15 +58,7 @@ width: 90vw;
 height: auto;
 justify-content: space-around;
 padding-top: 10px;
-/* justify-content: flex-end; */
 }
-
-/* .reem {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /* width: 20%; */
- 
 
 .title{
   padding: 0;
@@ -80,9 +70,7 @@ padding-top: 10px;
 
 .poster {
   display: block;
-  /* border-top-left-radius: 50px; */
-    /* border-bottom-right-radius: 30px; */
-    border-radius: 30px;
+  border-radius: 30px;
    
 }
 
@@ -90,14 +78,12 @@ padding-top: 10px;
 .link{
   color: rgb(39, 39, 39);
   text-decoration: none;
-  /* background-color: skyblue; */
- transition-duration: 0.4s;
+  transition-duration: 0.4s;
   padding : 10px;
   border-radius: 10px;
   
 }
 .link:hover{
-  /* font-weight: bold; */
   background-color: rgb(39, 39, 39);
   color: rgb(255, 217, 000);
   
@@ -130,9 +116,9 @@ h1{
   align-items: center;
   width: 99.8%;
   height: 50px;
+  font-family: 'Rokkitt', serif;
   background-color: rgb(255, 217, 000);
-  /* overflow: hidden; */
-  /* font-weight: bold; */
+ 
 }
 .in{
   width: 40px;
@@ -162,12 +148,12 @@ h3{
 .i{
     position: absolute;
     bottom: 0.1px;
-    opacity: 50%;
+    opacity: 0%;
     left: 0px; 
     font-size: 1.5em;
     line-height: 10px;
-    width: 100% !important;
-    height: 30px;
+    width: 100%;
+    height: 0px;
     background-color: rgb(255, 200, 000);
     border-bottom-right-radius: 80px ;
     border-bottom-left-radius: 80px ;
@@ -176,19 +162,9 @@ h3{
     transition-duration: 0.2s;
 }
 .i:hover{
-  opacity: 100%;
+  opacity: 80%;
+  height: 30px;
 }
-
-/* .ii{
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    /* display: none; */
- */
-/* .btn{
- display: flex;
-  justify-content: space-around;
-} */
 .remove{
  border-radius: 2px;
  
@@ -219,6 +195,26 @@ height: auto;
 
 .container2 {
   margin: 0.5rem;
-  height: 77vh;  
+  height: 75vh;  
+  color:rgb(255, 217, 000);
+  font-family: 'Rokkitt', serif;
   }
+  @-webkit-keyframes fadeInUpBig {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .fadeInUpBig {
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+  }
+  
   

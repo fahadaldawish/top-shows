@@ -31,7 +31,7 @@ The "Home" page contains the nav bar wich includes both of the lists and "About"
 
 ### Project status:
 For now , the application is able to show the high rated shows with poster and title. The user is able to add & remove show from the favorate list , and clear the whole list.
-<img ![project](images/project.png) alt="screenshot of the application">
+ ![project](images/project.png) alt="screenshot of the application"
 
 ----------------------------------------------------------------
 

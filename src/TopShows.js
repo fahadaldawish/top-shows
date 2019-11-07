@@ -37,7 +37,7 @@ class TopShows extends Component {
            topTen = <h1>Loading...</h1>
         }   
     return (
-        <div className="fahad">
+        <div className="fahad fadeInUpBig">
             {/* <Logo /> */}
             {topTen}
             
